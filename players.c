@@ -11,17 +11,20 @@
 #include <pthread.h>
 #include <stdio.h>
 #include <unistd.h>
+#include "deck.h"
 
-struct player_parms
-{
+struct player_parms{
     int pos;
-    int noPlayers;
+    int id;
+    int score;
+    Card game_hand[13];
+    Card won_hand[52];
 };
-void* philosophize (void* parameters) { /*Put philosopher-code here*/ return NULL; }
+void* play_hand (void* parameters) { /*Put philosopher-code here*/ return NULL; }
 
 int main (int argc, char* argv[])
 {
-    pthread_t phils[9]; /*Some sort of array of phils are needed*/
+    pthread_t phils[4]; /*Some sort of array of phils are needed*/
     struct player_parms control_player[3];
     int i=0;
     int noPlayers, lock;
