@@ -13,20 +13,18 @@
 #include <unistd.h>
 #include "deck.h"
 
-struct player_parms{
+struct player_parms;
+typedef struct player_parms{
     int pos;
     int id;
     int score;
     Card game_hand[13];
     Card won_hand[52];
-};
-<<<<<<< Updated upstream
-void* play_hand (void* parameters) { /*Put philosopher-code here*/ return NULL; }
-=======
-void *play(void *parameters) {
+}Player;
+
+void *play_hand(void *parameters) {
     return NULL;
 }
->>>>>>> Stashed changes
 
 int main (int argc, char* argv[])
 {
