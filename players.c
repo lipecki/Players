@@ -20,7 +20,13 @@ struct player_parms{
     Card game_hand[13];
     Card won_hand[52];
 };
+<<<<<<< Updated upstream
 void* play_hand (void* parameters) { /*Put philosopher-code here*/ return NULL; }
+=======
+void *play(void *parameters) {
+    return NULL;
+}
+>>>>>>> Stashed changes
 
 int main (int argc, char* argv[])
 {
